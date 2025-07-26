@@ -1,0 +1,7 @@
+# Ignore Composer dependencies
+/vendor/
+
+# Ignore IDE and OS files
+.idea/
+.vscode/
+.DS_Store
