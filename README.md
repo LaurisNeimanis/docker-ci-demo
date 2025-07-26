@@ -1,4 +1,5 @@
 # Docker CI Demo
+[![Docker CI](https://github.com/LaurisNeimanis/docker-ci-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/LaurisNeimanis/docker-ci-demo/actions/workflows/ci.yml)
 
 This repository demonstrates a basic Docker setup combined with a GitHub Actions CI pipeline for automated builds and tests.
 
