@@ -1,0 +1,27 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t ${{ github.repository }} .
+
+      - name: Run container tests
+        run: |
+          docker run --rm ${{ github.repository }} php -r "exit((int) !file_exists('index.php'));"
+
+      - name: Verify HTTP response
+        run: |
+          CONTAINER_ID=$(docker run -d -p 8080:80 ${{ github.repository }})
+          sleep 5
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080)
+          docker stop $CONTAINER_ID
+          test "$STATUS" = "200"
