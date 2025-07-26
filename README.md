@@ -35,6 +35,7 @@ This repository demonstrates a basic Docker setup combined with a GitHub Actions
 
 4. **CI Pipeline**
    Push any changes to the `main` branch to trigger the GitHub Actions workflow. It will:
+   - Checkout the code
    - Build the Docker image
    - Run containerized tests (if available)
 
