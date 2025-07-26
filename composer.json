@@ -1,0 +1,9 @@
+{
+  "name": "lauris-neimanis/docker-ci-demo",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App/"
+    }
+  }
+}
