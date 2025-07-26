@@ -34,7 +34,7 @@ This repository demonstrates a basic Docker setup combined with a GitHub Actions
    Visit `http://localhost:8080` to see the running application.
 
 4. **CI Pipeline**
-   Push any changes to the `main` branch to trigger the GitHub Actions workflow. It will:
+   Push any changes to the `master` branch to trigger the GitHub Actions workflow. It will:
    - Checkout the code
    - Build the Docker image
    - Run containerized tests (if available)
